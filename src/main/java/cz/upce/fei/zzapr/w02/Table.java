@@ -2,6 +2,8 @@ package cz.upce.fei.zzapr.w02;
 import java.util.Scanner;  // Import the Scanner class
 
 public class Table {
+    public static final String SPACE_FOR_CONTEXT = "%4d";
+
     public static void main(String[] args) {
         int size = askSize();
         table(size);
@@ -21,7 +23,7 @@ public class Table {
     public static void printHeader(int size) {
         System.out.printf("%7s", "||");
         for (int i = 0; i < size; i++) {
-            System.out.printf("%4d", i);
+            System.out.printf(SPACE_FOR_CONTEXT, i);
         }
         System.out.println();
     }
@@ -41,10 +43,10 @@ public class Table {
 
     public static void printContent(int size) {
         for (int i = 0; i < size; i++) {
-            System.out.printf("%4d", i);
+            System.out.printf(SPACE_FOR_CONTEXT, i);
             System.out.print(" ||");
             for (int j = 0; j < size; j++) {
-                System.out.printf("%4d", i * j);
+                System.out.printf(SPACE_FOR_CONTEXT, i * j);
             }
             System.out.println();
         }
