@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Array {
     public static void main(String[] args) {
         int[] firstArray = {1, 2, 3, 4, 5};
-        int[] secondArray = {2, 4, 6, 8, 10};
+        int[] secondArray = {2, 4, 6, 8, 10, 12};
 
         System.out.println("First Array: ");
         System.out.println(Arrays.toString(firstArray));
@@ -20,15 +20,20 @@ public class Array {
     }
 
     public static int[] sumArrays(int[] firstArray, int[] secondArray) {
-        if (firstArray.length != secondArray.length) {
-            System.out.println("Error: Arrays must be of the same length");
-            return null;
-        }
+        if (haveDifferentLength(firstArray, secondArray)) return null;
 
         int[] sumArray = new int[firstArray.length];
         for (int i = 0; i < firstArray.length; i++) {
             sumArray[i] = firstArray[i] + secondArray[i];
         }
         return sumArray;
+    }
+
+    private static boolean haveDifferentLength(int[] firstArray, int[] secondArray) {
+        if (firstArray.length != secondArray.length) {
+            System.out.println("Error: Arrays must be of the same length");
+            return true;
+        }
+        return false;
     }
 }
