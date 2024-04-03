@@ -10,7 +10,7 @@ public class SumOperation {
 
         Matrix sumMatrix = matrix1.add(matrix2);
         if (sumMatrix != null) {
-            sumMatrix.printMatrix();
+            System.out.println(sumMatrix.toString());
         } else {
             System.out.println("Unable to sum two matrices due to unmatched size");
         }
