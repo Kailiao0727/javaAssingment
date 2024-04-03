@@ -84,4 +84,17 @@ public class Matrix {
         return copy;
     }
 
+    @Override
+    public String toString() {
+        String ret = "";
+        for (int i = 0; i < this.matrix.length; i++) {
+            for (int j = 0; j < this.matrix[0].length; j++) {
+                ret += (String.format("%6d", this.matrix[i][j]));
+            }
+            ret += "\n";
+        }
+        return ret;
+    }
+
+
 }
