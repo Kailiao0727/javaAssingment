@@ -12,7 +12,7 @@ public class MulOperation {
         Matrix mulMatrix = matrix1.multiply(matrix2);
 
         if (mulMatrix != null) {
-            mulMatrix.printMatrix();
+            System.out.println(mulMatrix.toString());
         } else {
             System.out.println("Unable to multiply two matrices due to unmatched size");
         }
