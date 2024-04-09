@@ -1,4 +1,4 @@
-package cz.upce.fei.zzapr.w06;
+package cz.upce.fei.zzapr.w05_1;
 
 public class Matrix {
     private int[][] matrix;
